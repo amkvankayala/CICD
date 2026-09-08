@@ -1,0 +1,15 @@
+name: PR Checkout Check
+
+on:
+  pull_request:
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Confirm checkout
+        run: echo "Code successfully checked out!"

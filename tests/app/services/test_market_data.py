@@ -29,7 +29,7 @@ def test_yfinance_timedelta_deprecation_is_suppressed_at_provider_boundary() -> 
     warning_code = (
         "import warnings\n"
         "warnings.warn(\"The 'generic' unit for NumPy timedelta is deprecated, "
-        "and will raise an error in the future.\", DeprecationWarning)"
+        'and will raise an error in the future.", DeprecationWarning)'
     )
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter("always")

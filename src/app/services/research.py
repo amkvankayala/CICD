@@ -43,9 +43,11 @@ class ResearchService:
         )
         client = OpenAI(api_key=settings.openai_api_key)
         prompt = (
-            f"Research the company corresponding to {symbol} using web search. Cover only the past seven days."
+            f"Research the company corresponding to {symbol} using web search. "
+            "Cover only the past seven days."
             "State uncertainty "
-            "Check for any news items from major news outlets that may indicate a change in the company's fundamentals or outlook"
+            "Check for any news items from major news outlets that may indicate "
+            "a change in the company's fundamentals or outlook"
             "and do not provide investment advice. Provide a source URL in references for every "
             "factual claim. Use the required response schema."
         )

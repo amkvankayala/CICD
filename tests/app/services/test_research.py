@@ -26,9 +26,7 @@ def test_research_uses_web_search_and_parses_response(monkeypatch) -> None:
     response = SimpleNamespace(
         output_parsed=StockResearchResponse(
             weekly_highlights=["Event"],
-            swot=SWOT(
-                strengths=["Brand"], weaknesses=[], opportunities=[], threats=[]
-            ),
+            swot=SWOT(strengths=["Brand"], weaknesses=[], opportunities=[], threats=[]),
             short_term_outlook="Neutral",
             long_term_outlook="Positive",
             references=["https://example.com"],

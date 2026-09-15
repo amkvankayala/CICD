@@ -108,8 +108,7 @@ def render() -> None:
     first.metric("Trend", technical["trend"].title())
     second.metric("RSI (14)", display_value(technical.get("rsi_14")))
     moving_averages = (
-        f"{display_value(technical.get('sma_20'))} / "
-        f"{display_value(technical.get('sma_50'))}"
+        f"{display_value(technical.get('sma_20'))} / {display_value(technical.get('sma_50'))}"
     )
     third.metric("20 / 50-day SMA", moving_averages)
     st.table(technical_rows(technical))

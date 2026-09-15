@@ -37,8 +37,15 @@ def test_fundamentals_uses_service(monkeypatch) -> None:
     monkeypatch.setattr(
         "src.app.api.routers.stocks.fundamentals.get_fundamentals",
         lambda ticker: Fundamentals(
-            ticker=ticker, company_name="Apple", sector="Tech", market_cap=1, pe_ratio=2,
-            eps=3, dividend_yield=4, revenue_ttm=5, source="test",
+            ticker=ticker,
+            company_name="Apple",
+            sector="Tech",
+            market_cap=1,
+            pe_ratio=2,
+            eps=3,
+            dividend_yield=4,
+            revenue_ttm=5,
+            source="test",
         ),
     )
 
@@ -63,8 +70,12 @@ def test_research_uses_service(monkeypatch) -> None:
     monkeypatch.setattr(
         "src.app.api.routers.stocks.research.get_analysis",
         lambda ticker: ResearchAnalysis(
-            ticker=ticker, weekly_highlights=["Update"], swot={"Strengths": ["Brand"]},
-            short_term_outlook="Neutral", long_term_outlook="Positive", references=["https://example.com"],
+            ticker=ticker,
+            weekly_highlights=["Update"],
+            swot={"Strengths": ["Brand"]},
+            short_term_outlook="Neutral",
+            long_term_outlook="Positive",
+            references=["https://example.com"],
         ),
     )
 

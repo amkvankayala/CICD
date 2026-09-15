@@ -49,7 +49,7 @@ class ResearchService:
             "Check for any news items from major news outlets that may indicate "
             "a change in the company's fundamentals or outlook"
             "and do not provide investment advice. Provide a source URL in references for every "
-            "factual claim. Use the required response schema. "
+            "factual claim. Use the required response schema."
         )
         try:
             response = client.responses.parse(

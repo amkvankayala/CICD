@@ -11,6 +11,3 @@ def test_application_metadata_and_routes() -> None:
     assert app.title == "Stock Insights API"
     assert client.get("/health").status_code == 200
     assert client.get("/openapi.json").status_code == 200
-
-def test_fail():
-    assert 1 == 2
